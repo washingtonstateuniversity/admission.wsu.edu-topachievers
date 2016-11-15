@@ -55,7 +55,7 @@ module.exports = function(grunt) {
                     "qualified-headings": false,
                     "order-alphabetical": false,
                     "known-properties": 1,              // Okay to ignore in the case of known unknowns.
-                    "duplicate-background-images": 2,
+                    "duplicate-background-images": false,
                     "duplicate-properties": 2,
                     "star-property-hack": 2,
                     "text-indent": 2,
