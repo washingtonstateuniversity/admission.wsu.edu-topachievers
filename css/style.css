@@ -1,6 +1,6 @@
 @media (max-width: 989px) {
 
-	.global-bar wrap {
+	.global-bar .wrap {
 		display: none;
 	}
 }
