@@ -64,9 +64,6 @@
 		transition: all .3s ease;
 	}
 
-	nav.nav-block ul li:hover a {
-	}
-
 	nav.nav-block ul li a strong {
 		text-transform: uppercase;
 	}
