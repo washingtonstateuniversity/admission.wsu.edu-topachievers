@@ -7,4 +7,507 @@
  Template:       spine
  Version:        0.0.1
 */
+
+@media (max-width: 989px) {
+
+	.global-bar .wrap {
+		display: none;
+	}
+}
+
+@media (min-width: 990px) {
+
+	#spine {
+		display: none;
+	}
+
+	main {
+		margin: 0;
+	}
+
+	main * {
+		box-sizing: border-box;
+	}
+
+	.global-bar-wrap {
+		background: #efefef;
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+	}
+
+	.global-bar {
+		max-width: 1186px;
+		margin: 0 auto;
+		text-align: right;
+		padding: .85em 0 .75em;
+	}
+
+	#jacket .global-bar a.global-home {
+		color: #981e32;
+		text-transform: uppercase;
+		font-size: 1em;
+		letter-spacing: .5px;
+	}
+
+	.global-bar p {
+		padding: 0 4em 0 0;
+	}
+
+	nav.nav-block ul {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		padding: 0;
+	}
+
+	nav.nav-block ul li {
+		width: calc(100% / 3);
+	}
+
+	nav.nav-block ul li a {
+		color: #fff;
+		display: block;
+		font-size: 1.5em;
+		line-height: 1.5;
+		padding: calc(90px + 3em) 2em 2em;
+		text-align: center;
+		background-repeat: no-repeat;
+		background-position: center 1.5em;
+		-webkit-transition: all .3s ease;
+		transition: all .3s ease;
+	}
+
+	nav.nav-block ul li a strong {
+		text-transform: uppercase;
+	}
+
+	li.nav-apply {
+		background: #8d959a;
+	}
+
+	li.nav-receive {
+		background: #464e54;
+	}
+
+	li.nav-enhance {
+		background: #5e6a71;
+	}
+
+	li.nav-attend {
+		background: #5e6a71;
+	}
+
+	li.nav-earn {
+		background: #464e54;
+	}
+
+	li.nav-see {
+		background: #8d959a;
+	}
+
+	li.nav-apply a {
+		background-image: url(https://admission.wsu.edu/topachievers/wp-content/uploads/sites/1518/2016/11/apply-icon.png);
+	}
+
+	li.nav-receive a {
+		background-image: url(https://admission.wsu.edu/topachievers/wp-content/uploads/sites/1518/2016/11/receive-icon.png);
+	}
+
+	li.nav-enhance a {
+		background-image: url(https://admission.wsu.edu/topachievers/wp-content/uploads/sites/1518/2016/11/enhance-icon.png);
+	}
+
+	li.nav-attend a {
+		background-image: url(https://admission.wsu.edu/topachievers/wp-content/uploads/sites/1518/2016/11/attend-icon.png);
+	}
+
+	li.nav-earn a {
+		background-image: url(https://admission.wsu.edu/topachievers/wp-content/uploads/sites/1518/2016/11/earn-icon.png);
+		background-position: center 2.1em !important;
+	}
+
+	li.nav-see a {
+		background-image: url(https://admission.wsu.edu/topachievers/wp-content/uploads/sites/1518/2016/11/see-icon.png);
+	}
+}
+
+/* --- generasl overwrites --- */
+body {
+	color: #2d2d2d;
+}
+
+.single.row .column {
+	float: none;
+}
+
+/* --- type --- */
+h2 {
+	color: #981e32;
+	font-size: 3em;
+	font-weight: 700;
+	margin: 0;
+	padding: 1em 0 .75em;
+}
+
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+li {
+	font-weight: 300;
+}
+
+strong {
+	font-weight: 600;
+}
+
+.intro {
+	font-weight: 600;
+	margin-bottom: 1em;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+/**/
+main,
+.stick-image.main-pattern section {
+	background-image: url(https://admission.wsu.edu/topachievers/wp-content/uploads/sites/1518/2016/11/Pattern4.jpg);
+	position: relative;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-size: initial;
+}
+
+.stick-image.main-pattern,
+.stick-image.main-pattern section {
+	height: 100vh;
+}
+
+.stick-image.main-pattern + div {
+	margin-top: -70vh;
+}
+
+.main-header {
+	display: none;
+}
+
+.white-bg {
+	background: #fff;
+}
+
+.dreamer {
+	padding-top: 25vh;
+}
+
+.dreamer > section {
+	background-image: url(https://admission.wsu.edu/topachievers/wp-content/uploads/sites/1518/2016/11/Corona_7920.jpg);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+}
+
+.fluid .dreamer .row.single .column.one {
+	color: #fff;
+	display: inline-block;
+	font-size: 3.5rem;
+	margin: -10vh 0 0 10vw;
+	padding: 1.5em 1.5em 1em;
+	text-align: center;
+	width: initial;
+}
+
+.dreamer .column.one:before,
+.opportunity:before,
+.blended:before {
+	content: "";
+	position: absolute;
+	background: #981e32;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.blended:before {
+	background: rgba(47, 49, 50, 1);
+}
+
+.dreamer .one p {
+	position: relative;
+}
+
+.demonstrated,
+.apply,
+.scholarships,
+.explore,
+.explore-slider,
+.signature {
+	background: #fff;
+	margin: 6em 0;
+	padding: 1.5em 0 1em;
+	position: relative;
+}
+
+.apply,
+.scholarships,
+.opportunity,
+.explore {
+	padding-left: 10vw;
+}
+
+.demonstrated {
+	font-size: 2em;
+}
+
+.fluid .demonstrated.row.single .column.one {
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+	max-width: 860px;
+}
+
+.apply,
+.scholarships,
+.opportunity,
+.explore {
+	font-size: 1.5em;
+	padding-bottom: 6em;
+}
+
+.fcd-image section {
+	background-image: url(https://admission.wsu.edu/topachievers/wp-content/uploads/sites/1518/2016/11/HollandWalk_7901.jpg);
+}
+
+.fcd {
+	color: #fff;
+	font-size: 1.7em;
+	padding-bottom: 3em;
+	position: relative;
+}
+
+.fcd .one {
+	font-size: 1.25em;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	text-align: center;
+	padding: 2em 2em 0;
+}
+
+.fcd .one:before,
+.fcd .one:after {
+	content: "";
+	background-image: url(https://admission.wsu.edu/topachievers/wp-content/uploads/sites/1518/2016/11/attend-icon.png);
+	background-position: center center;
+	background-repeat: repeat-x;
+	background-size: 1em;
+	display: block;
+	height: 1em;
+	margin-bottom: .75em;
+}
+
+.fcd .two {
+	padding-right: 6em;
+}
+
+.fcd h2,
+.opportunity h2 {
+	color: #fff;
+}
+
+.reg-text {
+	font-size: .9em;
+}
+
+.fcd a {
+	color: #fff;
+	font-weight: 700;
+	-webkit-transition: border .3s ease;
+	transition: border .3s ease;
+}
+
+.fcd a:hover {
+	border-bottom: 1px solid;
+}
+
+.opportunity-image section {
+	background-image: url(https://admission.wsu.edu/topachievers/wp-content/uploads/sites/1518/2016/11/Don-Bender-PACCAR-Portrait.jpg);
+}
+
+.opportunity {
+	color: #fff;
+	position: relative;
+}
+
+.explore-image section {
+	background-image: url(https://admission.wsu.edu/topachievers/wp-content/uploads/sites/1518/2016/11/Thompson-in-Trees.jpg);
+}
+
+.explore {
+	margin-bottom: 0;
+}
+
+.explore p {
+	max-width: 775px;
+}
+
+.explore-nav {
+	margin-top: 0;
+	margin-bottom: 12em;
+}
+
+.explore-slider {
+	margin-bottom: 0;
+}
+
+/* --- sticky images --- */
+.stick-image {
+	height: 100vh;
+}
+
+.stick-image section {
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+	padding: 0;
+}
+
+.stick-image.sticky section {
+	position: fixed !important;
+	top: 0;
+	width: 100%;
+}
+
+/* --- slider --- */
+
+/* eliminating min-heights for slider sections */
+.section-wrapper.camp-students.section,
+.section-wrapper.camp-faculty.section,
+.section-wrapper.camp-programs.section {
+	min-height: 0;
+}
+
+ul.camp-slider {
+	display: block;
+	list-style: none;
+	padding: 0;
+	margin: 3rem auto 5rem;
+	width: 80%;
+}
+
+.sss {
+	height: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	display: block;
+}
+
+.ssslide {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	overflow: hidden;
+	min-height: 600px;
+}
+
+.ssslide img {
+	max-width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	display: block;
+}
+
+.sssnext,
+.sssprev {
+	width: 25px;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	top: 0;
+}
+
+.sssprev {
+	left: -2.5em;
+	background: url(https://magazine.wsu.edu/wp-content/themes/wsu-magazine-theme/images/left-arrow_icon.svg) no-repeat;
+	background-position: 10px;
+}
+
+.sssnext {
+	right: -2.5em;
+	background: url(https://magazine.wsu.edu/wp-content/themes/wsu-magazine-theme/images/right-arrow_icon.svg) no-repeat;
+	background-position: 5px;
+}
+
+.sssprev:hover,
+.sssnext:hover {
+	cursor: pointer;
+}
+
+span.slider-content {
+	width: 90%;
+	margin: 0 auto;
+	display: block;
+	background: rgba(255, 255, 255, .8);
+	padding: 2em 5%;
+	font-size: 1.25em;
+	line-height: 1.5;
+	position: absolute;
+	left: 5%;
+	bottom: 0;
+}
+
+.floricel {
+	background-image: url(https://admission.wsu.edu/topachievers/wp-content/uploads/sites/1518/2016/11/floricel-gonzalez.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+
+.bree {
+	background-image: url(https://admission.wsu.edu/topachievers/wp-content/uploads/sites/1518/2016/11/bree-berg.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+
+.emily {
+	background-image: url(https://admission.wsu.edu/topachievers/wp-content/uploads/sites/1518/2016/11/Emily-Hall.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+
+.ian {
+	background-image: url(https://admission.wsu.edu/topachievers/wp-content/uploads/sites/1518/2016/11/ian-richardson.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+
+.signature {
+	margin: 0;
+	padding: 2.5em 0 5.5em;
+}
+
+.signature img {
+	width: 350px;
+}
+
+.signature p {
+	text-align: center;
+}
 /*# sourceMappingURL=style.css.map */
