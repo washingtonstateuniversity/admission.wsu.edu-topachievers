@@ -1,8 +1,8 @@
 var Promise = require( "es6-promise" ).polyfill();
 
-module.exports = function(grunt) {
-    grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
+module.exports = function( grunt ) {
+    grunt.initConfig( {
+        pkg: grunt.file.readJSON( "package.json" ),
 
         stylelint: {
             src: [ "css/*.css" ]
@@ -13,8 +13,8 @@ module.exports = function(grunt) {
                 sourceMap: true
             },
             dist: {
-                src: 'css/*.css',
-                dest: 'tmp-style.css'
+                src: "css/*.css",
+                dest: "tmp-style.css"
             },
             main_js: {
                 src: [ "src/js/script.js" ],
@@ -42,25 +42,25 @@ module.exports = function(grunt) {
             main: {
                 src: [ "style.css" ],
                 options: {
-                    "fallback-colors": false,              // unless we want to support IE8
-                    "box-sizing": false,                   // unless we want to support IE7
+                    "fallback-colors": false,              // Unless we want to support IE8
+                    "box-sizing": false,                   // Unless we want to support IE7
                     "compatible-vendor-prefixes": false,   // The library on this is older than autoprefixer.
                     "gradients": false,                    // This also applies ^
                     "overqualified-elements": false,       // We have weird uses that will always generate warnings.
                     "ids": false,
-                    "regex-selectors": false,              // audit
+                    "regex-selectors": false,
                     "adjoining-classes": false,
-                    "box-model": false,                    // audit
-                    "universal-selector": false,           // audit
-                    "unique-headings": false,              // audit
-                    "outline-none": false,                 // audit
+                    "box-model": false,
+                    "universal-selector": false,
+                    "unique-headings": false,
+                    "outline-none": false,
                     "floats": false,
-                    "font-sizes": false,                   // audit
+                    "font-sizes": false,
                     "important": false,                    // This should be set to 2 one day.
                     "unqualified-attributes": false,       // Should probably be 2 one day.
                     "qualified-headings": false,
                     "order-alphabetical": false,
-                    "known-properties": 1,              // Okay to ignore in the case of known unknowns.
+                    "known-properties": 1,                 // Okay to ignore in the case of known unknowns.
                     "duplicate-background-images": false,
                     "duplicate-properties": 2,
                     "star-property-hack": 2,
@@ -78,7 +78,7 @@ module.exports = function(grunt) {
             options: {
                 force: true
             },
-            temp: [ 'tmp-style.css', 'tmp-style.css.map' ]
+            temp: [ "tmp-style.css", "tmp-style.css.map" ]
         },
 
         jscs: {
@@ -133,7 +133,7 @@ module.exports = function(grunt) {
 
         phpcs: {
             plugin: {
-                src: './'
+                src: "./"
             },
             options: {
                 bin: "vendor/bin/phpcs --extensions=php --ignore=\"*/vendor/*,*/node_modules/*\"",
@@ -161,7 +161,7 @@ module.exports = function(grunt) {
             }
         }
 
-    });
+    } );
 
     grunt.loadNpmTasks( "grunt-postcss" );
     grunt.loadNpmTasks( "grunt-contrib-concat" );
