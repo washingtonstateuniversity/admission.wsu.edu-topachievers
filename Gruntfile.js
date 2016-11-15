@@ -53,6 +53,7 @@ module.exports = function(grunt) {
                     "important": false,                    // This should be set to 2 one day.
                     "unqualified-attributes": false,       // Should probably be 2 one day.
                     "qualified-headings": false,
+                    "order-alphabetical": false,
                     "known-properties": 1,              // Okay to ignore in the case of known unknowns.
                     "duplicate-background-images": 2,
                     "duplicate-properties": 2,
