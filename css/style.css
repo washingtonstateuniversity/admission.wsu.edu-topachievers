@@ -373,7 +373,7 @@ main,
 .section-wrapper.camp-students.section,
 .section-wrapper.camp-faculty.section,
 .section-wrapper.camp-programs.section {
-	min-height: auto;
+	min-height: 0;
 }
 
 ul.camp-slider {
