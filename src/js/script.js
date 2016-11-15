@@ -1,46 +1,40 @@
-(function($,window) {
+( function( $, window ) {
 	var check_sticky = function() {
-		var $sticky_images = $('.stick-image');
-		$sticky_images.each(function(){
-			var $this = $(this);
-			var dist = $this.offset().top - $(window).scrollTop();
+		var $sticky_images = $( ".stick-image" );
+		$sticky_images.each( function() {
+			var $this = $( this );
+			var dist = $this.offset().top - $( window ).scrollTop();
 
-			if ( dist <= 0 && ! $this.hasClass('sticky') ) {
-				$this.addClass('sticky');
+			if ( dist <= 0 && !$this.hasClass( "sticky" ) ) {
+				$this.addClass( "sticky" );
 			}
 
-			if ( dist > 0 && $this.hasClass('sticky') ) {
-				$this.removeClass('sticky');
+			if ( dist > 0 && $this.hasClass( "sticky" ) ) {
+				$this.removeClass( "sticky" );
 			}
-		});
+		} );
 	};
-	$(window).on("load scroll resize", check_sticky );
-}(jQuery,window));
+	$( window ).on( "load scroll resize", check_sticky );
+}( jQuery, window ) );
 
 /** Super Simple Slider by @intllgnt **/
+( function( $, window, document, undefined ) {
 
-;(function($, window, document, undefined ) {
+	$.fn.sss = function( options ) {
 
-	$.fn.sss = function(options) {
+		var settings = $.extend( {
+			slideShow: false,
+			startOn: 0,
+			speed: 3500,
+			transition: 400,
+			arrows: true
+		}, options );
 
-// Options
+		return this.each( function() {
 
-		var settings = $.extend({
-			slideShow : false,
-			startOn : 0,
-			speed : 3500,
-			transition : 400,
-			arrows : true
-		}, options);
-
-		return this.each(function() {
-
-// Variables
-
-			var
-				wrapper = $(this),
-				slides = wrapper.children().wrapAll('<div class="sss"/>').addClass('ssslide'),
-				slider = wrapper.find('.sss'),
+			var	wrapper = $( this ),
+				slides = wrapper.children().wrapAll( "<div class='sss'/>" ).addClass( "ssslide" ),
+				slider = wrapper.find( ".sss" ),
 				slide_count = slides.length,
 				transition = settings.transition,
 				starting_slide = settings.startOn,
@@ -51,82 +45,76 @@
 				key,
 				prev,
 				next,
-
-// Reset Slideshow
-
 				reset_timer = settings.slideShow ? function() {
-					clearTimeout(timer);
-					timer = setTimeout(next_slide, settings.speed);
+					clearTimeout( timer );
+					timer = setTimeout( next_slide, settings.speed );
 				} : $.noop;
 
-// Animate Slider
-
-			function get_height(target) {
-				return ((slides.eq(target).height() / slider.width()) * 100) + '%';
+			function get_height( target ) {
+				return ( ( slides.eq( target ).height() / slider.width() ) * 100 ) + "%";
 			}
 
-			function animate_slide(target) {
-				if (!animating) {
+			function animate_slide( target ) {
+				if ( !animating ) {
 					animating = true;
-					var target_slide = slides.eq(target);
+					var target_slide = slides.eq( target );
 
-					target_slide.fadeIn(transition);
-					slides.not(target_slide).fadeOut(transition);
+					target_slide.fadeIn( transition );
+					slides.not( target_slide ).fadeOut( transition );
 
-					slider.animate({paddingBottom: get_height(target)}, transition,  function() {
+					slider.animate( { paddingBottom: get_height( target ) }, transition, function() {
 						animating = false;
-					});
+					} );
 
 					reset_timer();
 
-				}};
-
-// Next Slide
+				}
+			}
 
 			function next_slide() {
 				target = target === slide_count - 1 ? 0 : target + 1;
-				animate_slide(target);
+				animate_slide( target );
 			}
-
-// Prev Slide
 
 			function prev_slide() {
 				target = target === 0 ? slide_count - 1 : target - 1;
-				animate_slide(target);
+				animate_slide( target );
 			}
 
-			if (settings.arrows) {
-				slider.append('<div class="sssprev"/>', '<div class="sssnext"/>');
+			if ( settings.arrows ) {
+				slider.append( "<div class='sssprev'/>", "<div class='sssnext'/>" );
 			}
 
-			next = slider.find('.sssnext'),
-				prev = slider.find('.sssprev');
+			next = slider.find( ".sssnext" );
+			prev = slider.find( ".sssprev" );
 
-			$(window).load(function() {
+			$( window ).load( function() {
 
-				slider.css({paddingBottom: get_height(target)}).click(function(e) {
-					clicked = $(e.target);
-					if (clicked.is(next)) { next_slide() }
-					else if (clicked.is(prev)) { prev_slide() }
-				});
+				slider.css( { paddingBottom: get_height( target ) } ).click( function( e ) {
+					clicked = $( e.target );
+					if ( clicked.is( next ) ) {
+						next_slide();
+					} else if ( clicked.is( prev ) ) {
+						prev_slide();
+					}
+				} );
 
-				animate_slide(target);
+				animate_slide( target );
 
-				$(document).keydown(function(e) {
+				$( document ).keydown( function( e ) {
 					key = e.keyCode;
-					if (key === 39) { next_slide() }
-					else if (key === 37) { prev_slide() }
-				});
-
-			});
-// End
-
-		});
+					if ( key === 39 ) {
+						next_slide();
+					} else if ( key === 37 ) {
+						prev_slide();
+					}
+				} );
+			} );
+		} );
 
 	};
-})(jQuery, window, document);
+} )( jQuery, window, document );
 
-
-jQuery(function($) {
-	$('.camp-slider').sss();
-});
+jQuery( function( $ ) {
+	$( ".camp-slider" ).sss();
+} );
