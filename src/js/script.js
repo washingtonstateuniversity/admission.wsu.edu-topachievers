@@ -13,6 +13,24 @@
 				$this.removeClass( "sticky" );
 			}
 		} );
+
+		var $sticky_nav = $( ".stick-nav" );
+		var sticky_nav_offset = $sticky_nav.offset().top;
+		var sticky_nav_height = $sticky_nav.height();
+		$sticky_nav.css( "height", sticky_nav_height );
+
+		$sticky_nav.each( function() {
+			var $this = $( this );
+			var dist = sticky_nav_height - ( $( window ).scrollTop() - sticky_nav_offset );
+
+			if ( dist <= 75 && !$this.hasClass( "sticky" ) ) {
+				$this.addClass( "sticky" );
+			}
+
+			if ( dist > 75 && $this.hasClass( "sticky" ) ) {
+				$this.removeClass( "sticky" );
+			}
+		} );
 	};
 	$( window ).on( "load scroll resize", check_sticky );
 }( jQuery, window ) );
