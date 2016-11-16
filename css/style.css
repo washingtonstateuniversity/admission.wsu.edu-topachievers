@@ -319,22 +319,8 @@ li.nav-see a {
 	margin-bottom: 0;
 }
 
-/* --- sticky images --- */
-.stick-image {
-	height: 100vh;
-}
-
-.stick-image section {
-	background-size: cover;
-	height: 100vh;
-	width: 100%;
-	padding: 0;
-}
-
-.stick-image.sticky section {
-	position: fixed !important;
-	top: 0;
-	width: 100%;
+.explore-slider h2 {
+	text-align: center;
 }
 
 /* --- slider --- */
@@ -422,6 +408,12 @@ span.slider-content {
 	bottom: 0;
 }
 
+.justin {
+	background-image: url(https://admission.wsu.edu/topachievers/wp-content/uploads/sites/1518/2016/11/Justin-Niedermeyer.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+
 .floricel {
 	background-image: url(https://admission.wsu.edu/topachievers/wp-content/uploads/sites/1518/2016/11/floricel-gonzalez.jpg);
 	background-size: cover;
@@ -459,6 +451,24 @@ span.slider-content {
 	text-align: center;
 }
 
+/* --- sticky images --- */
+.stick-image {
+	height: 100vh;
+}
+
+.stick-image section {
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+	padding: 0;
+}
+
+.stick-image.sticky section {
+	position: fixed !important;
+	top: 0;
+	width: 100%;
+}
+
 @media (max-width: 989px) {
 
 	.global-bar-wrap {
@@ -468,9 +478,18 @@ span.slider-content {
 	.stick-nav.sticky section {
 		position: relative;
 	}
+
+	.fluid .demonstrated.row.single .column.one {
+		padding: 1em;
+	}
+
 }
 
 @media (min-width: 990px) {
+
+	.admin-bar .stick-nav.sticky section {
+		top: 32px;
+	}
 
 	#spine {
 		display: none;
@@ -503,9 +522,15 @@ span.slider-content {
 		padding: 0 4em 0 0;
 	}
 
+	nav.nav-block ul li {
+		transition: initial;
+	}
+
 	/* sticky-nav - only change on full view */
 	.stick-nav.sticky section {
 		position: fixed;
+		top: 0;
+		z-index: 99;
 	}
 
 	.stick-nav.sticky nav.nav-block ul li a {
@@ -525,10 +550,31 @@ span.slider-content {
 
 @media (max-width: 693px) {
 
+	h2 {
+		font-size: 1.5em;
+	}
+
+	main p,
+	main li {
+		font-size: .7em;
+	}
+
+	main ul {
+		padding: 0 0 1em 1em;
+	}
+
+	.intro {
+		padding: 0;
+	}
+
 	.fluid .dreamer .row.single .column.one {
 		font-size: 2.5em;
-		margin: -5vh 1em 0;
+		margin: -7.5vh 1em 0;
 		width: calc(100% - 2em);
+	}
+
+	.dreamer {
+		padding-top: 15vh;
 	}
 
 	.demonstrated,
@@ -548,21 +594,75 @@ span.slider-content {
 	.opportunity,
 	.explore {
 		padding-left: 0;
+		padding-bottom: 2em;
 	}
 
 	.column {
-		padding-left: 2em;
-		padding-right: 2em;
+		padding-left: 1em;
+		padding-right: 1em;
 	}
 
 	.explore-nav .column,
+	.explore-slider .column,
 	.nav-wrapper .column {
 		padding-left: 0;
 		padding-right: 0;
 	}
 
+	.demonstrated .column {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+
+	.demonstrated .column p {
+		font-size: .5em;
+	}
+
+	.stick-image {
+		height: 50vh;
+	}
+
 	.stick-image.main-pattern + div {
 		margin-top: -90vh;
+	}
+
+	.fcd {
+		font-size: 1.25em;
+	}
+
+	.fcd .two {
+		padding-right: 1em;
+	}
+
+	nav.nav-block ul li {
+		width: 100%;
+	}
+
+	ul.camp-slider {
+		width: 100%;
+	}
+
+	span.slider-content {
+		padding-bottom: 4em;
+	}
+
+	.sssnext,
+	.sssprev {
+		height: 45px;
+	}
+
+	.sssnext,
+	.sssprev {
+		bottom: 1em;
+		top: auto;
+	}
+
+	.sssprev {
+		left: 1em;
+	}
+
+	.sssnext {
+		right: 1em;
 	}
 
 }
