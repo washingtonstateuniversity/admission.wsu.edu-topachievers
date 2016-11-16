@@ -78,6 +78,18 @@ main,
 	background: #fff;
 }
 
+.blend-mode-multiply .one:before {
+	mix-blend-mode: multiply;
+}
+
+.opportunity:before {
+	mix-blend-mode: multiply;
+}
+
+.blended:before {
+	mix-blend-mode: multiply;
+}
+
 /* --- nav --- */
 nav.nav-block ul {
 	display: -webkit-box;
@@ -318,6 +330,25 @@ li.nav-see a {
 .opportunity {
 	color: #fff;
 	position: relative;
+}
+
+.section-wrapper.opportunity-options section .one {
+	background: rgba(255, 255, 255, .9);
+	margin: 4em 2em;
+	padding: 2em 3em;
+}
+
+.opportunity-options h3 {
+	font-size: 1.5rem;
+	margin-bottom: .25em;
+}
+
+.opportunity-options p {
+	font-size: 1rem;
+}
+
+.opportunity-desc {
+	margin-bottom: .25em;
 }
 
 .explore-image section {
@@ -655,6 +686,11 @@ span.slider-content {
 
 	.fcd .two {
 		padding-right: 1em;
+	}
+
+	.section-wrapper.opportunity-options section .one {
+		font-size: 1.5em;
+		width: calc(100% - 4em) !important;
 	}
 
 	nav.nav-block ul li {
