@@ -122,27 +122,39 @@ nav.nav-block ul li a strong {
 }
 
 li.nav-apply {
-	background: #8d959a;
+	background: #2f3235;
 }
 
 li.nav-receive {
-	background: #5e6a71;
+	background: #797a7c;
 }
 
 li.nav-enhance {
-	background: #464e54;
+	background: #4e5154;
 }
 
 li.nav-attend {
-	background: #5e6a71;
+	background: #6d6d6d;
 }
 
 li.nav-earn {
-	background: #464e54;
+	background: #606162;
 }
 
 li.nav-see {
-	background: #8d959a;
+	background: #414243;
+}
+
+li.nav-find {
+	background: #343536;
+}
+
+li.nav-experience {
+	background: #6a6a6c;
+}
+
+li.nav-travel {
+	background: #8e9091;
 }
 
 li.nav-apply a {
@@ -238,6 +250,7 @@ li.nav-see a {
 .scholarships,
 .opportunity,
 .explore {
+	padding-top: 4em;
 	padding-left: 10vw;
 }
 
@@ -267,6 +280,7 @@ li.nav-see a {
 .fcd {
 	color: #fff;
 	font-size: 1.7em;
+	padding-top: 2em;
 	padding-bottom: 3em;
 	position: relative;
 }
@@ -590,6 +604,8 @@ span.slider-content {
 	.stick-nav.sticky nav.nav-block ul li a {
 		background: none;
 		padding: .5em 0 .3em;
+		font-size: 1.2em;
+		min-height: 0;
 	}
 
 	.stick-nav.sticky nav.nav-block ul li a span {
@@ -597,9 +613,54 @@ span.slider-content {
 	}
 
 	.stick-nav.sticky nav.nav-block ul li {
+		-webkit-transition: border .3s ease;
+		transition: border .3s ease;
+		overflow: hidden;
 		width: calc(100% / 6);
 	}
 
+	.sticky nav.nav-block ul li a:hover strong {
+		font-size: 1em;
+	}
+
+	.stick-nav.sticky nav.nav-block ul li a strong {
+		font-weight: 300;
+	}
+
+	.sticky nav.nav-block a svg {
+		top: -2.5em;
+	}
+
+	.sticky nav.nav-block a svg .st0 {
+		fill: rgba(255, 255, 255, .1);
+	}
+
+	.sticky nav.nav-block a:hover svg .st0 {
+		fill: rgba(255, 255, 255, .35);
+	}
+
+	.stick-nav.sticky nav.nav-block ul li a:hover strong {
+		font-weight: 600;
+	}
+
+	.sticky nav.nav-block ul li a:hover svg {
+		height: 7.5rem;
+		top: -3em;
+	}
+
+}
+
+@media (max-width: 850px) {
+
+	.fluid .fcd .row.side-left .column.one,
+	.fluid .fcd .row.side-left .column.two {
+		width: 100%;
+	}
+
+	.fluid .fcd .row.side-left .column.two {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
 }
 
 @media (max-width: 693px) {
@@ -697,6 +758,14 @@ span.slider-content {
 		width: 100%;
 	}
 
+	.opportunity-desc {
+		display: block !important;
+	}
+
+	#opportunity-list h3:after {
+		display: none;
+	}
+
 	ul.camp-slider {
 		width: 100%;
 	}
@@ -724,5 +793,169 @@ span.slider-content {
 		right: 1em;
 	}
 
+}
+
+.apply,
+.scholarships,
+.opportunity,
+.explore {
+	padding-top: 4em;
+}
+
+.fcd {
+	padding-top: 2em;
+}
+
+.stick-nav.sticky nav.nav-block ul li {
+	-webkit-transition: border .3s ease;
+	transition: border .3s ease;
+	overflow: hidden;
+}
+
+.stick-nav.sticky nav.nav-block ul li a {
+	font-size: 1.2em;
+	min-height: 0;
+}
+
+.sticky nav.nav-block ul li a:hover strong {
+	font-size: 1em;
+}
+
+.stick-nav.sticky nav.nav-block ul li a strong {
+	font-weight: 300;
+}
+
+.sticky nav.nav-block a svg {
+	top: -2.5em;
+}
+
+.sticky nav.nav-block a svg .st0 {
+	fill: rgba(255, 255, 255, .1);
+}
+
+.sticky nav.nav-block a:hover svg .st0 {
+	fill: rgba(255, 255, 255, .35);
+}
+
+.stick-nav.sticky nav.nav-block ul li a:hover strong {
+	font-weight: 600;
+}
+
+.sticky nav.nav-block ul li a:hover svg {
+	height: 7.5rem;
+	top: -3em;
+}
+
+@media (min-width: 693px) {
+
+	.opportunity-desc {
+		display: block !important;
+	}
+
+	#opportunity-list h3:after {
+		display: none;
+	}
+}
+
+@media (max-width: 850px) {
+
+	.fluid .fcd .row.side-left .column.one,
+	.fluid .fcd .row.side-left .column.two {
+		width: 100%;
+	}
+
+	.fluid .fcd .row.side-left .column.two {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+}
+
+nav.nav-block ul li {
+	position: relative;
+}
+
+nav.nav-block svg {
+	width: auto;
+	height: 6.5rem;
+	position: absolute;
+	top: 1.5em;
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+svg .st0 {
+	-webkit-transition: fill .3s ease;
+	transition: fill .3s ease;
+}
+
+nav.nav-block ul li a:hover svg {
+	height: 80%;
+	top: 1em;
+}
+
+nav.nav-block a:hover svg .st0 {
+	fill: rgba(255, 255, 255, .1);
+}
+
+nav.nav-block strong {
+	display: block;
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+nav.nav-block ul li a:hover strong {
+	font-size: 1.5em;
+}
+
+li.nav-apply a,
+li.nav-receive a,
+li.nav-enhance a,
+li.nav-attend a,
+li.nav-earn a,
+li.nav-see a,
+li.nav-find a,
+li.nav-experience a,
+li.nav-travel a {
+	background-image: none;
+}
+
+nav.nav-block ul li a {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	min-height: 300px;
+	padding: 0 2em 2em;
+}
+
+#opportunity-list h3 {
+	cursor: pointer;
+}
+
+#opportunity-list h3:after {
+	content: "+/-";
+	margin-left: .5em;
+	font-size: 50%;
+	vertical-align: middle;
+	color: #5e6a71;
+	letter-spacing: .15em;
+	background-color: #d7dadb;
+	padding: .1em .5em;
+	border-radius: 3px;
+}
+
+#opportunity-list h3:hover:after {
+	color: #fff;
+	background-color: #981e32;
+	font-size: 54%;
 }
 /*# sourceMappingURL=style.css.map */
