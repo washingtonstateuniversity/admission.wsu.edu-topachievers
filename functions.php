@@ -79,13 +79,31 @@ function admission_ta_register_svgs() {
 
 	ob_start();
 	?>
-	<svg id="svg-see-find-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 750 555"><style>.st0{fill:#F7F1E8;}</style><defs><path id="SVGID_1_" d="M107.2 7.8h535.6V546H107.2z"/></defs><path class="st0" d="M375 540.8c-95.4 0-179-51.1-225-127.4h224.6l.4.7.4-.7H600c-46 76.3-129.6 127.4-225 127.4M112.4 278.2c0-143.3 115.3-260 258-262.5l-225 389.7c-21-37.7-33-81.1-33-127.2m376.9-62l110.8 192H378.4l110.9-192zm-228.6 0l110.9 192H149.8l110.9-192zm222.2.6L375 403.7 267.1 216.8h215.8zm3.8-5.2H263.3L375 18.2l111.7 193.4zm150.9 66.6c0 46.1-12 89.5-33 127.3l-225-389.7c142.7 2.4 258 119.1 258 262.4m-30 132.5c22.4-39.1 35.2-84.3 35.2-132.5 0-147.2-119.3-267-266.3-267.8L375 7.8l-1.5 2.7c-147 .8-266.3 120.6-266.3 267.8 0 48.2 12.9 93.4 35.2 132.5l-1.6 2.7h3.2C190.5 492.7 276.6 546 375 546s184.5-53.3 231-132.6h3.2l-1.6-2.7z"/>
+	<svg version="1.1" id="svg-find-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 59.9 59.1" style="enable-background:new 0 0 59.9 59.1;" xml:space="preserve"><style type="text/css"> .st0{fill:#F8F1E9;}</style>
+		<g>
+			<g><path class="st0" d="M59,53.1H0.7L29.9,2.6L59,53.1z M1.7,52.6H58L29.9,3.8L1.7,52.6z"/></g>
+			<g><path class="st0" d="M29.9,53.2L15.4,28h29L29.9,53.2z M16.3,28.6L29.9,52l13.5-23.4H16.3z"/></g>
+			<g><rect x="29.6" y="3.2" class="st0" width="0.6" height="49.4"/></g>
+			<g><polygon class="st0" points="1.4,53 1,52.6 29.7,28.1 30.1,28.5"/></g>
+			<g><rect x="43.9" y="21.7" transform="matrix(0.6502 -0.7597 0.7597 0.6502 -15.3647 47.7694)" class="st0" width="0.6" height="37.7"/></g>
+		</g>
+</svg>
 	<?php
-	$see_find_icon = ob_get_contents();
+	$find_icon = ob_get_contents();
 	ob_end_clean();
 
-	wsu_register_inline_svg( 'see-find-icon', $see_find_icon );
-	unset( $see_find_icon );
+	wsu_register_inline_svg( 'find-icon', $find_icon );
+	unset( $find_icon );
+
+	ob_start();
+	?>
+	<svg id="svg-see-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 750 555"><style>.st0{fill:#F7F1E8;}</style><defs><path id="SVGID_1_" d="M107.2 7.8h535.6V546H107.2z"/></defs><path class="st0" d="M375 540.8c-95.4 0-179-51.1-225-127.4h224.6l.4.7.4-.7H600c-46 76.3-129.6 127.4-225 127.4M112.4 278.2c0-143.3 115.3-260 258-262.5l-225 389.7c-21-37.7-33-81.1-33-127.2m376.9-62l110.8 192H378.4l110.9-192zm-228.6 0l110.9 192H149.8l110.9-192zm222.2.6L375 403.7 267.1 216.8h215.8zm3.8-5.2H263.3L375 18.2l111.7 193.4zm150.9 66.6c0 46.1-12 89.5-33 127.3l-225-389.7c142.7 2.4 258 119.1 258 262.4m-30 132.5c22.4-39.1 35.2-84.3 35.2-132.5 0-147.2-119.3-267-266.3-267.8L375 7.8l-1.5 2.7c-147 .8-266.3 120.6-266.3 267.8 0 48.2 12.9 93.4 35.2 132.5l-1.6 2.7h3.2C190.5 492.7 276.6 546 375 546s184.5-53.3 231-132.6h3.2l-1.6-2.7z"/>
+	<?php
+	$see_icon = ob_get_contents();
+	ob_end_clean();
+
+	wsu_register_inline_svg( 'see-icon', $see_icon );
+	unset( $see_icon );
 
 	ob_start();
 	?>
