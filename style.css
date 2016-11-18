@@ -875,10 +875,11 @@ nav.nav-block ul li {
 }
 
 nav.nav-block svg {
-	width: auto;
+	width: 100%;
 	height: 6.5rem;
 	position: absolute;
 	top: 1.5em;
+	left: 0;
 	-webkit-transition: all .3s ease;
 	transition: all .3s ease;
 }
