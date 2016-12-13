@@ -2,7 +2,7 @@
 
 add_filter( 'spine_child_theme_version', 'admission_ta_theme_version' );
 function admission_ta_theme_version() {
-	return '0.0.6';
+	return '0.0.7';
 }
 
 add_action( 'wp_enqueue_scripts', 'admission_ta_wp_enqueue_scripts', 20 );
