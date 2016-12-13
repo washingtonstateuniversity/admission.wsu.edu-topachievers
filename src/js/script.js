@@ -138,7 +138,7 @@ jQuery( function( $ ) {
 } );
 
 jQuery( function( $ ) {
-	$( ".nav-block" ).on( "click", "a", function( e ) {
+	$( ".nav-block" ).on( "click", "a[href^='#']", function( e ) {
 	    e.preventDefault();
 
 	    $( "body, html" ).animate( {
